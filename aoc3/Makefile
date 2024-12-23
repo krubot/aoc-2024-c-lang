@@ -14,6 +14,9 @@ $(TARGET): $(SRC)
 run: $(TARGET)
 	./$(TARGET)
 
+fmt:
+	clang-format -i $(SRC)
+
 clean:
 	rm -f $(TARGET)
 
