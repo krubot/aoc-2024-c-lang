@@ -22,7 +22,6 @@ struct Map {
   bool outOfBounds;
 };
 
-// Function prototypes
 struct Field fieldInit(void);
 void freeField(char **field, int height);
 struct Map next(struct Map map);
@@ -30,7 +29,6 @@ struct Map next(struct Map map);
 struct Map next(struct Map map) {
   int x = -1, y = -1;
 
-  // Find the '^' position
   for (int i = 0; i < map.fieldHeight; i++) {
     for (int j = 0; j < map.fieldLength; j++) {
       if (map.field[i][j] == '^') {
@@ -42,7 +40,7 @@ struct Map next(struct Map map) {
     if (x != -1) break;
   }
 
-  if (x == -1 || y == -1) { // No '^' found, mark out of bounds
+  if (x == -1 || y == -1) {
     map.outOfBounds = true;
     return map;
   }
@@ -77,7 +75,7 @@ struct Map next(struct Map map) {
       map.field[x + 1][y] = '^';
       map.field[x][y] = 'X';
     }
-  } else { // LEFT
+  } else {
     if (y <= 0) {
       map.outOfBounds = true;
       map.field[x][y] = 'X';
@@ -127,7 +125,7 @@ struct Field fieldInit(void) {
 
   struct Field field = {
       .field = arr,
-      .fieldHeight = arrHeight + 1, // Adjust for 0-indexing
+      .fieldHeight = arrHeight + 1,
       .fieldLength = arrLength,
   };
 
