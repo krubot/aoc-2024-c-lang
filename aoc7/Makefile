@@ -1,6 +1,6 @@
 # Variables
 CC = clang
-CFLAGS = -Wall -Wextra -std=c17 -O2
+CFLAGS = -Wall -Wextra -std=c17 -O2 -lm
 LDFLAGS =
 TARGET = main
 SRC = main.c
