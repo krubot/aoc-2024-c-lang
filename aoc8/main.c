@@ -67,7 +67,7 @@ int main() {
 
   fclose(file);
 
-	char anti_field[MAX_LENGTH][MAX_HEIGHT] = {0};
+  char anti_field[MAX_LENGTH][MAX_HEIGHT] = {0};
 
   for (int ch = 0; ch <= 127; ch++) {
     if (isalnum(ch)) {
@@ -84,7 +84,7 @@ int main() {
 
           if (0 <= i1 && i1 < field_max_length && 0 <= j1 &&
               j1 < field_max_height) {
-						anti_field[j1][i1] = '#';
+            anti_field[j1][i1] = '#';
           }
 
           if (0 <= i2 && i2 < field_max_length && 0 <= j2 &&
@@ -96,13 +96,13 @@ int main() {
     }
   }
 
-	int count = 0;
+  int count = 0;
 
   for (int y = 0; y < field_max_height; y++) {
     for (int x = 0; x < field_max_length; x++) {
-			if (anti_field[y][x] == '#') {
-				count++;
-			}
+      if (anti_field[y][x] == '#') {
+        count++;
+      }
     }
   }
 

@@ -37,7 +37,8 @@ struct Map next(struct Map map) {
         break;
       }
     }
-    if (x != -1) break;
+    if (x != -1)
+      break;
   }
 
   if (x == -1 || y == -1) {
@@ -164,7 +165,7 @@ int main(void) {
   }
   printf("answer1: %d\n", count);
 
-  // TODO: improve speed and memory profile 
+  // TODO: improve speed and memory profile
   int count2 = 0;
 
   for (int i = 0; i < field.fieldHeight; i++) {
@@ -202,4 +203,3 @@ int main(void) {
   freeField(field.field, field.fieldHeight);
   return 0;
 }
-

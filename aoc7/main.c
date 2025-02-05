@@ -77,7 +77,7 @@ int main() {
     long long *valArray = values[i];
 
     bool match = false;
-    
+
     int numCombinations = pow(2, numValues - 1);
 
     for (int j = 0; j < numCombinations; j++) {

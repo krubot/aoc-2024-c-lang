@@ -167,26 +167,26 @@ int main() {
 
   printf("Answer1: %d\n", sum);
 
-	/*
-  // Compute the sum2
-  int sum2 = 0;
-  for (int i = 0; i < listIndex; i++) {
-    bool pass = true;
-    for (int j = 0; j < conditionArrSize; j++) {
-      if (!check(list[i], listArrSize[i], conditionArr[j][0],
-                 conditionArr[j][1])) {
-        pass = false;
-        break;
-      }
-    }
-    if (!pass) {
-      int middle = (listArrSize[i] - 1) / 2;
-      sum2 += list[i][middle];
-    }
-  }
+  /*
+// Compute the sum2
+int sum2 = 0;
+for (int i = 0; i < listIndex; i++) {
+bool pass = true;
+for (int j = 0; j < conditionArrSize; j++) {
+if (!check(list[i], listArrSize[i], conditionArr[j][0],
+           conditionArr[j][1])) {
+  pass = false;
+  break;
+}
+}
+if (!pass) {
+int middle = (listArrSize[i] - 1) / 2;
+sum2 += list[i][middle];
+}
+}
 
-  printf("Answer2: %d\n", sum2);
-	*/
+printf("Answer2: %d\n", sum2);
+  */
 
   // Free memory
   for (int i = 0; i < capacity; i++) {
